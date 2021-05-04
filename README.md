@@ -50,17 +50,3 @@ If no `alacritty.yml` is found in your `$HOME` path, you can create one using th
 ```
 alacritty-themes --create
 ```
-
-## Bonus Tip: Alias
-You can also create an alias for `alacritty-themes` like `at` 
-Just append this below line to your `~/.bashrc` or `~/.bash_profile`
-
-```
-alias at='alacritty-themes'
-```
-
-Now you can simply use `at` to choose themes for your alacritty terminal.
-
-```
-at
-```
