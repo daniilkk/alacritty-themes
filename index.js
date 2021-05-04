@@ -28,7 +28,10 @@ function createConfigFile() {
 }
 
 function updateTheme(data, theme, preview = false) {
-  const themePath = path.join(__dirname, `themes/${theme}.yml`);
+  const themePath_yml = path.join(__dirname, `themes/${theme}.yml`);
+  const themePath_yaml = path.join(__dirname, `themes/${theme}.yaml`);
+
+  const themePath = [themePath_yml, themePath_yaml].find(fs.existsSync);
   const themeFile = fs.readFileSync(themePath, 'utf8');
 
   const doc = YAML.parseDocument(data);

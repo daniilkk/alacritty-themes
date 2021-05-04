@@ -8,7 +8,7 @@ const temp = require('temp').track();
 const { applyTheme, createConfigFile, ymlPath } = require('../index');
 
 const themesDir = path.join(__dirname, '..', 'themes/');
-const themes = fs.readdirSync(themesDir).map((f) => f.replace('.yml', ''));
+const themes = fs.readdirSync(themesDir).map((f) => f.replace(/.ya?ml$/g, ''));
 
 function main() {
   if (process.argv.length > 2) {
